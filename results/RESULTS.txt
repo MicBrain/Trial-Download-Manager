@@ -1,0 +1,12 @@
+
+| Number of Files  | Regular Request | Pipelined Request | Multiplexed Request |
+| :--------------: | :-------------: | :---------------: | :-----------------: |
+|       5          | 1.1869 seconds  | 0.6267 seconds    | 0.067 seconds       |
+|      10          | 2.4187 seconds  | 1.1357 seconds    | 0.76 seconds        |
+|      25          | 5.7115 seconds  | 3.3981 seconds    | 1.889 seconds       |
+|      50          | 10.7404 seconds | 6.5168  seconds   | 3.907 seconds       |
+|     100          | 19.9996 seconds | 12.1113 seconds   | 7.976 seconds       |
+|     200          | 42.6127 seconds | 22.9481 seconds   | 15.234 seconds      |
+|     250          | 50.8068 seconds | 27.8424 seconds   | 18.675 seconds      |
+|     500          | 99.6116 seconds | 53.8454 seconds   | 37.946 seconds      |
+|    1000          | 198.677 seconds | 103.712 seconds   | 79.347 seconds      |
