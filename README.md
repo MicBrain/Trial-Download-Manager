@@ -6,4 +6,4 @@
 
 ### Software Requirements
 
-  Currently this software is guaranteed to run perfectly on Ubuntu OS. During the development of this project, the 
+  Currently this software is guaranteed to run perfectly on Ubuntu OS. During the development of this project, the official version of libcurl that supports HTTP/2 was not 
