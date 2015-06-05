@@ -6,4 +6,4 @@
 
 ### Software Requirements
 
-  Currently this software is guaranteed to run perfectly on 
+  Currently this software is guaranteed to run perfectly on Ubuntu OS.
