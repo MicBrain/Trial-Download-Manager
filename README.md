@@ -6,7 +6,7 @@
   
 ### How to Run
 
-I have made a Makefile in order to make it easier to ru
+I have made a Makefile in order to make it easier to compile and run the project.
 
 ### Software Requirements
 
