@@ -10,4 +10,3 @@
 |     250          | 50.8068 seconds | 27.8424 seconds   | 18.675 seconds      |
 |     500          | 99.6116 seconds | 53.8454 seconds   | 37.946 seconds      |
 |    1000          | 198.677 seconds | 103.712 seconds   | 79.347 seconds      |
-
