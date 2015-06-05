@@ -6,4 +6,4 @@
 
 ### Software Requirements
 
-  Currently this software is guaranteed to run perfectly on Ubuntu OS. During the development of this project, the official version of libcurl that supports HTTP/2 was not from the git repo: https://github.com/bagder/curl. The next version (7.43.0) of libcurl will become the first 
+  Currently this software is guaranteed to run perfectly on Ubuntu OS. During the development of this project, the official version of libcurl that supports HTTP/2 was not from the git repo: https://github.com/bagder/curl. The next version (7.43.0) of libcurl will become the first official version to support multiplexed transfers over HTTP/2.
