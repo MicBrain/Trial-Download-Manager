@@ -9,7 +9,8 @@
 I have made a Makefile in order to make it easier to compile and run the project. In order to compile and run, enter these following commands: 
 
 ```
-make      # compiles the whole package
+make            # compiles the whole package
+./bin/main
 ```
 
 ### Software Requirements
