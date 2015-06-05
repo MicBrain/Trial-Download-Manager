@@ -1,2 +1,2 @@
-# Trial-Download-Manager
+# Trial Download Manager
 
