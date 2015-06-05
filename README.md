@@ -22,4 +22,3 @@ make            # compiles the whole package
   * LiteSpeed Web Server 5.0
   * Akamai Edge Servers support
   
-
