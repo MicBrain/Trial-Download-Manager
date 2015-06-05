@@ -10,7 +10,8 @@ I have made a Makefile in order to make it easier to compile and run the project
 
 ```
 make            # compiles the whole package
-./bin/main
+./bin/main      # runs tests for Regular and Pipelined requests
+
 ```
 
 ### Software Requirements
