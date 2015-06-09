@@ -1,7 +1,9 @@
 /* Implementation of the "Regular Request" option of Download
- * Manager. It has two fully-functional constructors - one
- * for downloading just a single file and the other one - for 
- * downloading multiple files.
+ * Manager. It has three fully-functional constructors: first
+ * one for downloading just a single file, the secon one for 
+ * downloading multiple files using various TCP connections 
+ * and the last one for downloading multiple files using the 
+ * same TCP connection.
  *
  * @author: Rafayel Mkrtchyan
 */
