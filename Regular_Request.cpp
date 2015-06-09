@@ -66,10 +66,11 @@ Regular_Request::Regular_Request(string URLs[], int length) {
     cout << "Downloading all the files in " << overall << " seconds" << endl;
 }
 
-/** The second constructor for the Regular Request Manager.
+/** The third constructor for the Regular Request Manager.
  *  URLs - list of the all urls that contain the files for 
  *  the download.
  *  length - length of the URLs array.
+ *  keepAlive - option for HTTP keep-alive functionality.
  *  This option downloads files using single TCP connection.
  */
 Regular_Request::Regular_Request(string URLs[], int length, bool keepAlive) {
