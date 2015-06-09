@@ -42,7 +42,9 @@ Regular_Request::Regular_Request(string myURL, int option, int message) {
 /** The second constructor for the Regular Request Manager.
  *  URLs - list of the all urls that contain the files for 
  *  the download.
- *  length - length of the URLs array. 
+ *  length - length of the URLs array.
+ *  This option downloads files using different TCP connec-
+ *  tions.
  */
 Regular_Request::Regular_Request(string URLs[], int length) {
     int index;
@@ -62,6 +64,46 @@ Regular_Request::Regular_Request(string URLs[], int length) {
     double duration = std::chrono::duration_cast<std::chrono::microseconds>( ending_point- starting_point).count();
     overall = truncate_double(duration/1000000, 4);
     cout << "Downloading all the files in " << overall << " seconds" << endl;
+}
+
+/** The second constructor for the Regular Request Manager.
+ *  URLs - list of the all urls that contain the files for 
+ *  the download.
+ *  length - length of the URLs array.
+ *  This option downloads files using single TCP connection.
+ */
+Regular_Request::Regular_Request(string URLs[], int length, bool keepAlive) {
+    double result;
+    string message = "curl_easy_setopt";
+    if (keepAlive) {
+        double overall;
+        high_resolution_clock::time_point start = high_resolution_clock::now();
+        CURL *session;
+        CURLcode option;
+        CURLcode curl_code;
+        session = curl_easy_init();
+        if (session) {
+            FILE *devnull = fopen("/dev/null", "w+");
+            for (int index = 0; index < length; index++) {
+                int URL_Length = URLs[index].length();
+                char stringToPass[URL_Length + 1];
+                strcpy(stringToPass, URLs[index].c_str());
+                option = curl_easy_setopt(session, CURLOPT_URL, stringToPass);
+                handle_easy_error(option, message);
+                option = curl_easy_setopt(session, CURLOPT_WRITEFUNCTION, write_callback);
+                handle_easy_error(option, message);
+                option = curl_easy_setopt(session, CURLOPT_WRITEDATA, devnull);
+                handle_easy_error(option, message);
+                curl_code = curl_easy_perform(session);
+            }
+            fclose(devnull);
+            curl_easy_cleanup(session);
+        }
+        high_resolution_clock::time_point end = high_resolution_clock::now();
+        double duration = std::chrono::duration_cast<std::chrono::microseconds>( end- start ).count();
+        result = truncate_double(duration/1000000, 4);
+        cout << "Downloading files in " << result << " seconds" << endl;
+    }
 }
 
 /* The setter method. */

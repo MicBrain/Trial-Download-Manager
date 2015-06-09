@@ -21,6 +21,7 @@ class Regular_Request {
 public:
     Regular_Request(string, int, int);
     Regular_Request(string[], int);
+    Regular_Request(string[], int, bool);
     void setURL(string);
     string getURL();
     double download_single_regular(char*);
